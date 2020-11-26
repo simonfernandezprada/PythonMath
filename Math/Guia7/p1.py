@@ -6,9 +6,9 @@ x = np.arange(0, 8, 0.01)
 # definimos la funcion
 f = -x**2+8*x
 plt.plot(x, f)
-plt.xlabel("Tiempo en días (d)")
-plt.ylabel("Computadores infectados en miles (k)")
-plt.title("Propagación de un virus computacional")
+plt.xlabel("Tiempo en años (a)")
+plt.ylabel("Cantidad de trabajadores (u)")
+plt.title("Historia de un fracaso")
 ax = plt.gca()
 ax.spines["left"].set_position("zero")
 ax.spines["bottom"].set_position("zero")
