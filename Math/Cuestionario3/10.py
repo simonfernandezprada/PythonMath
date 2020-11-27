@@ -37,11 +37,13 @@ c = -128.7
 print("""b) Determine las 2 soluciones de la ecuación planteada anteriormente. Justifique sus resultados con desarrollo matemático o con un código Python. (2 puntos)""")
 
 if ((b**2)-4*a*c) < 0:
-    print("La solución es con números complejos")
+    print("Números complejos")
 else:
     x1 = (-b+sqrt(b**2-(4*a*c)))/(2*a)
     x2 = (-b-sqrt(b**2-(4*a*c)))/(2*a)
-    print(f"Las soluciones de la ecuación son:\nx1 = {x1}\nx2 = {x2}")
+    print(f"""Las soluciones son:
+    x1 = {x1}
+    x2 = {x2}""")
 
 print("""
 c) Según el contexto del problema y la gráfica, indique el rango de tiempo para el cual la velocidad de la moto es menor a la velocidad del automóvil.
