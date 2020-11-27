@@ -1,36 +1,50 @@
 import matplotlib.pyplot as plt
 import numpy as np
+from math import sqrt
 
-x=np.arange(0,16,0.5)
-f=(-4/3)*x**2+(71/3)*x
-g=2*x**2-23*x+80
+print("""De un mismo hogar han sido robados simultáneamente, una moto y un automóvil, los cuales
+están siendo monitoreados por su propio dueño a través de dispositivos de rastreo GPS.
+Al cabo de x minutos del robo, la moto se desplaza con una velocidad en km/h dada por la
+función r(x). Mientras que, en ese mismo instante, el automóvil tiene una velocidad
+también medida en km/h dada por la función s(x).""")
 
-plt.xlabel("Tiempo (minutos)")
-plt.ylabel("Temperatura (grados celsius)")
+x=np.arange(-9,12,1)
+s=-1.6*x**2+1.3*x+141.3
+r=1.4*x**2-5.6*x+12.6
 
-plt.plot(x,f,color="b")
-plt.plot(x,g,color="g")
-plt.axis([0,15,0,120])
+plt.xlabel("Tiempo en minutos (m)")
+plt.ylabel("Velocidad en kilómetros por hora (km/h)")
+
+plt.plot(x,s,color="b")
+plt.plot(x,r,color="r")
+plt.axis([-9,12,0,150])
 
 plt.grid(True)
-plt.annotate("f: Liquido A",xy=(3,110))
-plt.annotate("g: Liquido B",xy=(9,25))
 plt.show()
 
-a = 10/3
-b = -140/3
-c = 80
+print("""
+a) A partir de la igualdad entre ambas funciones, obtener una ecuación de la forma: a*x^2 + b*x + c = 0, que tenga relación con la intersección de las dos curvas cuadráticas.
+
+a = 3
+b = -6.9
+c = -128.7
+""")
+
+a = 3
+b = -6.9
+c = -128.7
+
+print("""b) Determine las 2 soluciones de la ecuación planteada anteriormente. Justifique sus resultados con desarrollo matemático o con un código Python. (2 puntos)""")
+
 if ((b**2)-4*a*c) < 0:
     print("La solución es con números complejos")
 else:
     x1 = (-b+sqrt(b**2-(4*a*c)))/(2*a)
     x2 = (-b-sqrt(b**2-(4*a*c)))/(2*a)
-    print(f"Las soluciones de la ecuación son:\n{x1}\n{x2}\n")
+    print(f"Las soluciones de la ecuación son:\nx1 = {x1}\nx2 = {x2}")
+
 print("""
-e) Determine e interprete las coordenadas del vertice de la parábola.
-Vertice de la parábola = -b/2*a
+c) Según el contexto del problema y la gráfica, indique el rango de tiempo para el cual la velocidad de la moto es menor a la velocidad del automóvil.
+
+Desde el minuto -5,5 hasta el minuto 7,8 la moto es menor a la velocidad del automóvil, es decir, durante 13,3 minutos
 """)
-v=-b/2*a
-print(f"El vértice de la parábola es decir el año con más trabajadores es el año ({v})")
-y2 = -v**2+8*v
-print(f"f({v}) = {y2}\n")
